@@ -24,6 +24,10 @@
         <activity
             android:name=".GoogleCalendarSampleActivity"
             android:label="@string/title_activity_google_calendar_sample"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GoogleDriveSampleActivity"
+            android:label="@string/title_activity_google_drive_sample_acitivty"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

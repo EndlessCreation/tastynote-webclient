@@ -258,7 +258,7 @@ public class GoogleCalendarSampleActivity extends AppCompatActivity {
             DateTime now = new DateTime(System.currentTimeMillis());
             List<String> eventStrings = new ArrayList<String>();
             Events events = mService.events().list("primary")
-                    .setMaxResults(10)
+                    .setMaxResults(50)
                     .setTimeMin(now)
                     .setOrderBy("startTime")
                     .setSingleEvents(true)

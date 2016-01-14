@@ -17,9 +17,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** TEMP: must be public */
-    public void showCalendar(View view) {
-        Log.d(TAG, "showCalendar clicked");
+    public void onShowCalendarClicked(View view) {
+        Log.d(TAG, "onShowCalendarClicked clicked");
         Intent intent = new Intent(this, GoogleCalendarSampleActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onShowDriveClicked(View view) {
+        Log.d(TAG, "onShowDriveClicked clicked");
+        Intent intent = new Intent(this, GoogleDriveSampleActivity.class);
         startActivity(intent);
 
     }

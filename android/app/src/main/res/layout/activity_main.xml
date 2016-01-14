@@ -19,7 +19,16 @@
         android:layout_height="wrap_content"
         android:text="Show Calendar"
         android:id="@+id/btn_show_calendar"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:onClick="showCalendar"/>
+        android:onClick="onShowCalendarClicked"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Drive"
+        android:id="@+id/btn_show_drive"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onShowDriveClicked"/>
 </RelativeLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TastyNote</string>
     <string name="title_activity_google_calendar_sample">GoogleCalendarSampleActivity</string>
+    <string name="title_activity_google_drive_sample_acitivty">GoogleDriveSampleAcitivty</string>
 </resources>
