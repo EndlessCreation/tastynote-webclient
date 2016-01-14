@@ -12,4 +12,9 @@
     tools:context="kr.re.ec.android.tastynote.GoogleCalendarSampleActivity"
     tools:showIn="@layout/activity_google_calendar_sample">
 
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
