@@ -1,5 +1,5 @@
 # TastyNote
-[![Build Status](https://travis-ci.org/JuhoKang/TastyNote.svg?branch=master)](https://travis-ci.org/JuhoKang/TastyNote)<br>
+[![Build Status](https://travis-ci.org/JuhoKang/TastyNote.svg?branch=webclient)](https://travis-ci.org/JuhoKang/TastyNote)<br>
 ▲ webclient build status<br>
 Billion notes for billion people! a note which suits your taste.<br>
 <br>
