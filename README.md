@@ -8,7 +8,11 @@ We will start with examples, sample codes and build it up till it becomes tasty!
 <br>
 Web client application for tastynote. This must be tasty!
 <br>
+<br>
 Juho Kang
+<br>
 Taehee Kim
-=======
+
+=============
+
 
