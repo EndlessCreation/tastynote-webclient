@@ -7,15 +7,18 @@ angular.module('socially').directive('partyDetails', function () {
             $reactive(this).attach($scope);
 
             this.subscribe('parties');
-            this.subscribe('users');            
-            
+            this.subscribe('users');
+
             this.helpers({
                 party: () => {
                     return Parties.findOne({ _id: $stateParams.partyId });
                 },
                 users: () => {
                     return Meteor.users.find({});
-                }
+                },
+                isLoggedIn: () => {
+                    return Meteor.userId() !== null;
+                },
             });
 
             this.save = () => {
@@ -33,6 +36,24 @@ angular.module('socially').directive('partyDetails', function () {
                         console.log('Done!');
                     }
                 });
+            };
+
+            this.invite = (user) => {
+                Meteor.call('invite', this.party._id, user._id, (error) => {
+                    if (error) {
+                        console.log('Oops, unable to invite!');
+                    }
+                    else {
+                        console.log('Invited!');
+                    }
+                });
+            };
+
+            this.canInvite = () => {
+                if (!this.party)
+                    return false;
+
+                return !this.party.public && this.party.owner === Meteor.userId();
             };
         }
     }

@@ -19,3 +19,7 @@ angularui:angular-ui-router
 accounts-password
 dotansimha:accounts-ui-angular
 accounts-google
+angularutils:pagination
+tmeasday:publish-counts
+check
+email
