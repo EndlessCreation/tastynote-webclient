@@ -1,0 +1,9 @@
+meteor remove blaze-html-templates
+meteor remove ecmascript
+
+meteor add angular
+meteor add angularui:angular-ui-router
+meteor add accounts-google
+meteor add less
+meteor add planettraining:material-design-icons
+meteor add dotansimha:accounts-ui-angular
