@@ -13,7 +13,7 @@ We will start with examples, sample codes and build it up till it becomes tasty!
 ###Currently working
 1. complete meteor-angular tutorials. --done
 2. melt google drive api into tastynote --pending
-3. make a basic add, save, edit note --in progress
+3. make a basic add, delete, edit note --in progress
 
 ##Problem
 ![alt text](./tastynote.png "screenshot")
