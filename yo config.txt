@@ -1,0 +1,4 @@
+used https://github.com/ndxbxrme/generator-angular-meteor
+
+npm install -g generator-angular-meteor
+yo angular-meteor tastynote
