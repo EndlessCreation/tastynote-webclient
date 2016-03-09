@@ -11,10 +11,12 @@ travis build is failing. need to change yml settings.
 This is the web client application for tastynote.<br>
 We will start with examples, sample codes and build it up till it becomes tasty!
 
+###Features
+We can add ,delete find a note. simple login(nothing touched) 
+
 ###Currently working
-1. complete meteor-angular tutorials. --done
 2. melt google drive api into tastynote --pending
-3. make a basic add, delete, edit note --in progress
+3. make a basic add, delete, edit note -- done a little bit?
 4. learn the structure, code from yo generators --in progress
 
 ##Problem
