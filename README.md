@@ -1,8 +1,7 @@
 # tastynote-webclient
-<!--[![Build Status](https://travis-ci.org/EndlessCreation/tastynote-webclient.svg?branch=master)](https://travis-ci.org/EndlessCreation/tastynote-webclient)
+[![Build Status](https://travis-ci.org/EndlessCreation/tastynote-webclient.svg?branch=master)](https://travis-ci.org/EndlessCreation/tastynote-webclient)
 <br>
-travis build is failing. need to change yml settings.
-<br>-->
+
 
 ###Intro
 ![alt text](./tastynote.png "icon")
