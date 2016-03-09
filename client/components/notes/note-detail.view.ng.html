@@ -1,0 +1,32 @@
+<div class="note-detail" layout="row">
+    <span flex=""></span>
+    <div layout="column">
+        <h1>Here are the details of the note</h1>
+        <form name="form" ng-submit="save()" class="md-whiteframe-z1" layout-padding>
+            <div layout="row">
+                <md-input-container>
+                    <label>Name</label>
+                    <input ng-model="note.name" placeholder="Name">
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container>
+                    <label>Content</label>
+                    <input ng-model="note.content" placeholder="Content">
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-content>
+                    <label>Create Date</label>
+                    <label>{{note.createDate}}</label>
+                </md-content>
+            </div>
+            <div layout="row">
+                <input class="md-button" type="submit" value="Save">
+                <md-button ng-click="reset()">Reset</md-button>
+                <a href="/notes" class="md-button">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <span flex=""></span>
+</div>

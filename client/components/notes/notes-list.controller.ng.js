@@ -28,6 +28,7 @@ angular.module('tastynoteApp')
 
   $scope.save = function() {
     if ($scope.form.$valid) {
+      $scope.newNote.createDate = new Date(); 
       Notes.insert($scope.newNote);
       $scope.newNote = undefined;
     }

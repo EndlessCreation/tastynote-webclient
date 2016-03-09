@@ -5,7 +5,7 @@ angular.module('tastynoteApp')
   $stateProvider
   .state('notes-list', {
     url: '/notes',
-    templateUrl: 'client/notes/notes-list.view.ng.html',
+    templateUrl: 'client/components/notes/notes-list.view.ng.html',
     controller: 'NotesListCtrl',
     resolve: {
       currentUser: ['$meteor', function($meteor) {
@@ -15,7 +15,7 @@ angular.module('tastynoteApp')
   })
   .state('note-detail', {
     url: '/notes/:noteId',
-    templateUrl: 'client/notes/note-detail.view.ng.html',
+    templateUrl: 'client/components/notes/note-detail.view.ng.html',
     controller: 'NoteDetailCtrl',
     resolve: {
       currentUser: ['$meteor', function($meteor) {
