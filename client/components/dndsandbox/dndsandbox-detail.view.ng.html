@@ -1,0 +1,99 @@
+<div class="dndsandbox-detail" layout="row">
+    <span flex=""></span>
+    <div layout="column">
+        <h1>Here are the details of the dndsandbox</h1>
+        <form name="form" ng-submit="save()" class="md-whiteframe-z1" layout-padding>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="dndsandbox.name" placeholder="Name">
+            </md-input-container>
+
+
+
+
+
+
+
+
+
+
+
+            <div layout="row">
+                <h1>Demo: Simple Lists</h1>
+
+                <div class="alert alert-success">
+                    <strong>Instructions:</strong> Drag &amp; drop the list items to move them around, or just click to select
+                    them. If that's too boring, check out the <a href="#/nested">nested container demo</a>
+                </div>
+
+                <div class="simpleDemo row">
+
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div ng-repeat="(listName, list) in models.lists" class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">List {{listName}}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <!-- The dnd-list directive allows to drop elements into it.
+                           The dropped data will be added to the referenced list -->
+                                        <ul dnd-list="list">
+                                            <!-- The dnd-draggable directive makes an element draggable and will
+                               transfer the object that was assigned to it. If an element was
+                               dragged away, you have to remove it from the original list
+                               yourself using the dnd-moved attribute -->
+                                            <li ng-repeat="item in list" dnd-draggable="item" dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = item"
+                                            ng-class="{'selected': models.selected === item}">
+                                                {{item.label}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div view-source="simple"></div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Generated Model</h3>
+                            </div>
+                            <div class="panel-body">
+                                <pre class="code">{{modelAsJson}}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div layout="row">
+                <input class="md-button" type="submit" value="Save">
+                <md-button ng-click="reset()">Reset</md-button>
+                <md-button ng-click="/dndsandbox">Cancel</md-button>
+            </div>
+        </form>
+    </div>
+    <span flex=""></span>
+</div>
