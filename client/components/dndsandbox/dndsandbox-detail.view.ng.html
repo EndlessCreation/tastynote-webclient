@@ -10,32 +10,24 @@
 
 
 
-
-
-
-
-
-
-
-
-            <div layout="row">
+            <div layout="column">
                 <h1>Demo: Simple Lists</h1>
 
-                <div class="alert alert-success">
+                <div flex>
                     <strong>Instructions:</strong> Drag &amp; drop the list items to move them around, or just click to select
                     them. If that's too boring, check out the <a href="#/nested">nested container demo</a>
                 </div>
 
-                <div class="simpleDemo row">
+                <div class="simpleDemo row" flex>
 
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div ng-repeat="(listName, list) in models.lists" class="col-md-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">List {{listName}}</h3>
+                    <div flex>
+                        <div class="column">
+                            <div ng-repeat="(listName, list) in models.lists" flex>
+                                <div>
+                                    <div>
+                                        <h3>List {{listName}}</h3>
                                     </div>
-                                    <div class="panel-body">
+                                    <div>
                                         <!-- The dnd-list directive allows to drop elements into it.
                            The dropped data will be added to the referenced list -->
                                         <ul dnd-list="list">
@@ -57,13 +49,13 @@
 
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Generated Model</h3>
+                    <div flex>
+                        <div>
+                            <div>
+                                <h3>Generated Model</h3>
                             </div>
-                            <div class="panel-body">
-                                <pre class="code">{{modelAsJson}}</pre>
+                            <div>
+                                <p class="code">{{modelAsJson}}</p>
                             </div>
                         </div>
                     </div>
@@ -74,24 +66,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div layout="row">
                 <input class="md-button" type="submit" value="Save">
                 <md-button ng-click="reset()">Reset</md-button>
-                <md-button ng-click="/dndsandbox">Cancel</md-button>
+                <md-button ng-href="/dndsandbox">Cancel</md-button>
             </div>
         </form>
     </div>
