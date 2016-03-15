@@ -37,7 +37,17 @@
                                yourself using the dnd-moved attribute -->
                                             <li ng-repeat="item in list" dnd-draggable="item" dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = item"
                                             ng-class="{'selected': models.selected === item}">
-                                                {{item.label}}
+                                            <md-card>
+                                                <div class="md-media-xl card-media"></div>
+                                                <md-card-title>
+                                                    <md-card-title-text><span class="md-headline">Title</span></md-card-title-text>
+                                                </md-card-title>
+                                                <md-card-content layout="row">
+                                                    <p>
+                                                        {{item.label}} and something
+                                                    </p>
+                                                </md-card-content>
+                                            </md-card>
                                             </li>
                                         </ul>
                                     </div>
