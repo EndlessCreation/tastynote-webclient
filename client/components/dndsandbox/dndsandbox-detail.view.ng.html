@@ -1,87 +1,98 @@
 <div class="dndsandbox-detail" layout="row">
-    <span flex=""></span>
-    <div layout="column">
-        <h1>Here are the details of the dndsandbox</h1>
-        <form name="form" ng-submit="save()" class="md-whiteframe-z1" layout-padding>
-            <md-input-container>
-                <label>Name</label>
-                <input ng-model="dndsandbox.name" placeholder="Name">
-            </md-input-container>
+    <section layout="row" flex>
+        <span flex=""></span>
+        <div layout="column" flex="70">
+            <h1>Here are the details of the dndsandbox</h1>
+            <form name="form" ng-submit="save()" class="md-whiteframe-z1" layout-padding>
+                <md-input-container>
+                    <label>Name</label>
+                    <input ng-model="dndsandbox.name" placeholder="Name">
+                </md-input-container>
 
 
 
-            <div layout="column">
-                <h1>Demo: Simple Lists</h1>
-
-                <div flex>
-                    <strong>Instructions:</strong> Drag &amp; drop the list items to move them around, or just click to select
-                    them. If that's too boring, check out the <a href="#/nested">nested container demo</a>
-                </div>
-
-                <div class="simpleDemo row" flex>
+                <div layout="column">
+                    <h1>Demo: Simple Lists</h1>
 
                     <div flex>
-                        <div class="column">
-                            <div ng-repeat="(listName, list) in models.lists" flex>
-                                <div>
+                        <strong>Instructions:</strong> Drag &amp; drop the list items to move them around, or just click
+                        to select them. If that's too boring, check out the <a href="#/nested">nested container demo</a>
+                    </div>
+
+                    <div class="simpleDemo row" flex>
+
+                        <div flex>
+                            <div class="column">
+                                <div ng-repeat="(listName, list) in models.lists" flex>
                                     <div>
-                                        <h3>List {{listName}}</h3>
-                                    </div>
-                                    <div>
-                                        <!-- The dnd-list directive allows to drop elements into it.
+                                        <div>
+                                            <h3>List {{listName}}</h3>
+                                        </div>
+                                        <div>
+                                            <!-- The dnd-list directive allows to drop elements into it.
                            The dropped data will be added to the referenced list -->
-                                        <ul dnd-list="list">
-                                            <!-- The dnd-draggable directive makes an element draggable and will
+                                            <ul dnd-list="list">
+                                                <!-- The dnd-draggable directive makes an element draggable and will
                                transfer the object that was assigned to it. If an element was
                                dragged away, you have to remove it from the original list
                                yourself using the dnd-moved attribute -->
-                                            <li ng-repeat="item in list" dnd-draggable="item" dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = item"
-                                            ng-class="{'selected': models.selected === item}">
-                                            <md-card>
-                                                <div class="md-media-xl card-media"></div>
-                                                <md-card-title>
-                                                    <md-card-title-text><span class="md-headline">Title</span></md-card-title-text>
-                                                </md-card-title>
-                                                <md-card-content layout="row">
-                                                    <p>
-                                                        {{item.label}} and something
-                                                    </p>
-                                                </md-card-content>
-                                            </md-card>
-                                            </li>
-                                        </ul>
+                                                <li ng-repeat="item in list" dnd-draggable="item" dnd-moved="list.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="models.selected = item"
+                                                ng-class="{'selected': models.selected === item}">
+                                                    <md-card>
+                                                        <div class="md-media-xl card-media"></div>
+                                                        <md-card-title>
+                                                            <md-card-title-text><span class="md-headline">Title</span></md-card-title-text>
+                                                        </md-card-title>
+                                                        <md-card-content layout="row">
+                                                            <p>
+                                                                {{item.label}} and something
+                                                            </p>
+                                                        </md-card-content>
+                                                    </md-card>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div view-source="simple"></div>
+
+                        </div>
+
+                        <div flex>
+                            <div>
+                                <div>
+                                    <h3>Generated Model</h3>
+                                </div>
+                                <div>
+                                    <p class="code">{{modelAsJson}}</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div view-source="simple"></div>
-
-                    </div>
-
-                    <div flex>
-                        <div>
-                            <div>
-                                <h3>Generated Model</h3>
-                            </div>
-                            <div>
-                                <p class="code">{{modelAsJson}}</p>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
 
-            </div>
 
 
+                <div layout="row">
+                    <input class="md-button" type="submit" value="Save">
+                    <md-button ng-click="reset()">Reset</md-button>
+                    <md-button ng-href="/dndsandbox">Cancel</md-button>
+                </div>
+            </form>
+        </div>
 
-            <div layout="row">
-                <input class="md-button" type="submit" value="Save">
-                <md-button ng-click="reset()">Reset</md-button>
-                <md-button ng-href="/dndsandbox">Cancel</md-button>
-            </div>
-        </form>
-    </div>
-    <span flex=""></span>
+        <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-xs')" md-disable-backdrop md-whiteframe="4">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+            </md-toolbar>
+            <md-content layout-paddnig>
+                <p>Hey</p>
+            </md-content>
+        </md-sidenav>
+        <!--<span flex=""></span>-->
+    </section>
 </div>
