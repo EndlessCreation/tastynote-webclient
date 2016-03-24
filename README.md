@@ -14,9 +14,16 @@ We will start with examples, sample codes and build it up till it becomes tasty!
 We can add ,delete find a note. simple login(nothing touched) 
 
 ###Currently working
+
+![alt text](./ss1.png "screen 1")
+![alt text](./ss2.png "screen 2")
+![alt text](./ss3.png "screen 3")
+can drag and drop from the side menu.
+
 2. melt google drive api into tastynote --pending
 3. make a basic add, delete, edit note -- done a little bit?
-4. learn the structure, code from yo generators --in progress
+4. learn the structure, code from yo generators -- done
+5. make concrete plan(layout) for the drag and drop sandbox 
 
 ##Problem
 
