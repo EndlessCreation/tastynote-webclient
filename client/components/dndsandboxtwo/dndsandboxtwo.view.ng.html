@@ -1,0 +1,76 @@
+<div class="dndsandbox-list" layout="row">
+    <span flex=""></span>
+    <div layout="column">
+        <h1>DndsandboxTwo</h1>
+
+
+        <div id="products">
+            <h1 class="ui-widget-header">Products</h1>
+            <div id="catalog">
+                <h2><a href="#">T-Shirts</a></h2>
+                <div>
+                    <ul>
+                        <li ng-repeat='item in list1' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                        ng-model="list1" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">{{item.title}}</li>
+                    </ul>
+                </div>
+                <h2><a href="#">Bags</a></h2>
+                <div>
+                    <ul>
+                        <li ng-repeat='item in list2' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                        ng-model="list2" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</li>
+                    </ul>
+                </div>
+                <h2><a href="#">Gadgets</a></h2>
+                <div>
+                    <ul>
+                        <button ng-repeat='item in list3' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                        ng-model="list3" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="cart">
+            <h1 class="ui-widget-header">Shopping Cart</h1>
+            <div class="ui-widget-content">
+                <ol data-drop="true" ng-model='list4' jqyoui-droppable="{multiple:true}">
+                    <li ng-repeat="item in list4 track by $index" ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                    ng-model="list4" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</li>
+                    <li class="placeholder" ng-hide="hideMe()">Add your items here</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <form class="md-whiteframe-z1" ng-submit="save()" name="form" novalidate layout-padding="">
+            <p>Add a dndsandbox</p>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="newDndsandbox.name" placeholder="Name">
+            </md-input-container>
+            <input class="md-button" type="submit" value="Add">
+        </form>
+        <div layout="row" layout-padding="">
+            <md-input-container flex="65">
+                <label>Search</label>
+                <input type="Search" ng-model="search" placeholder="Search">
+            </md-input-container>
+            <md-select ng-model="orderProperty" flex="35">
+                <md-option value="1">Ascending</md-option>
+                <md-option value="-1">Descending</md-option>
+            </md-select>
+        </div>
+
+        <ul>
+            <li dir-paginate="adndsandbox in dndsandbox | itemsPerPage: perPage" total-items="dndsandboxCount" current-page='page'>
+                <p><a href="/dndsandbox/{{dndsandbox._id}}">link{{ adndsandbox.name }}</a>
+                    <button ng-click="remove(dndsandbox)">&times;</button>
+                </p>
+            </li>
+        </ul>
+        <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+
+        <p>Total number of dndsandbox: {{dndsandboxCount}}</p>
+    </div>
+    <span flex=""></span>
+</div>

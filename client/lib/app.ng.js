@@ -4,7 +4,8 @@ angular.module('tastynoteApp', [
     'ngMaterial',
     'angularUtils.directives.dirPagination',
     'accounts.ui',
-    'dndLists'
+    'dndLists',
+    'ngDragDrop'
 ]);
 
 onReady = function () {

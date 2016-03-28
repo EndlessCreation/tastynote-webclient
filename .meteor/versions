@@ -45,6 +45,7 @@ fastclick@1.0.7
 flemay:less-autoprefixer@1.2.0
 geojson-utils@1.0.4
 google@1.1.7
+heinerion:angular-dragdrop@1.0.11
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
@@ -62,6 +63,8 @@ meteor@1.1.10
 meteor-base@1.0.1
 minifiers@1.1.7
 minimongo@1.0.10
+mizzao:build-fetcher@0.2.0
+mizzao:jquery-ui@1.11.4
 mobile-experience@1.0.1
 mobile-status-bar@1.0.6
 mongo@1.1.3
