@@ -11,6 +11,10 @@ angular.module('tastynoteApp')
             return $scope.list4.length > 0;
         }
 
+        $scope.$watch('list4', function (model) {
+            $scope.list4AsJson = angular.toJson(model, true);
+        }, true);
+        
         $scope.helpers({
         });
 

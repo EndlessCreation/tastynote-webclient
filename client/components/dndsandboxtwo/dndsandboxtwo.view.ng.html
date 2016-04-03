@@ -17,15 +17,16 @@
                 <h2><a href="#">Bags</a></h2>
                 <div>
                     <ul>
-                        <li ng-repeat='item in list2' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
-                        ng-model="list2" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</li>
+                        <md-toolbar class="md-warn" ng-repeat='item in list2' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                        ng-model="list2" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">
+                        <div class="md-toolbar-tools"><h2 class="md-flex">{{item.title}}</h2></div></md-toolbar>
                     </ul>
                 </div>
                 <h2><a href="#">Gadgets</a></h2>
                 <div>
                     <ul>
-                        <button ng-repeat='item in list3' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
-                        ng-model="list3" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</button>
+                        <div class="md-button" ng-repeat='item in list3' ng-show="item.title" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}"
+                        ng-model="list3" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">{{item.title}}</div>
                     </ul>
                 </div>
             </div>
@@ -40,6 +41,8 @@
                 </ol>
             </div>
         </div>
+        
+        <div>{{list4AsJson}}</div>
 
 
         <form class="md-whiteframe-z1" ng-submit="save()" name="form" novalidate layout-padding="">

@@ -26,7 +26,7 @@
                     </li>
                 </ul>
             </div>
-         <!--   <p>Hey</p> -->
+            <!--   <p>Hey</p> -->
         </md-content>
     </md-sidenav>
     <div layout="column" flex="" role="main">
@@ -49,14 +49,16 @@
                                 <!-- The dnd-list directive allows to drop elements into it.
                            The dropped data will be added to the referenced list -->
                                 <ul dnd-list="boardModel.lists.Canvas">
-                                    <div class="listbackground">drag here</div>
+                                    <div class="dndPlaceholder">Place to put in</div>
                                     <!-- The dnd-draggable directive makes an element draggable and will
                                transfer the object that was assigned to it. If an element was
                                dragged away, you have to remove it from the original list
                                yourself using the dnd-moved attribute -->
                                     <li ng-repeat="item in boardModel.lists.Canvas" dnd-draggable="item" dnd-moved="boardModel.lists.Canvas.splice($index, 1)"
                                     dnd-effect-allowed="move" dnd-selected="models.selected = item" ng-class="{'selected': models.selected === item}">
-                                       <md-card>
+
+                                        <div class="dndPlaceholder">{{item.label}} Place to put in</div>
+                                     <!--   <md-card>
                                             <div class="md-media-xl card-media"></div>
                                             <md-card-title>
                                                 <md-card-title-text><span class="md-headline">Title</span></md-card-title-text>
@@ -66,7 +68,7 @@
                                                     {{item.label}} and something
                                                 </p>
                                             </md-card-content>
-                                        </md-card>
+                                        </md-card>-->
                                     </li>
                                 </ul>
                             </div>

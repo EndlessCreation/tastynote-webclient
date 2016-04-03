@@ -17,7 +17,7 @@ angular.module('tastynoteApp')
         for (var i = 1; i <= 3; ++i) {
             $scope.itemModels.lists.Title.push({ label: "Item A" + i });
         }
-        //$scope.boardModel.lists.Canvas.push({ label: "Blank" });
+        $scope.boardModel.lists.Canvas.push({ label: "Blank" });
         // Model to JSON for demo purpose
         $scope.$watch('boardModel', function (model) {
             $scope.boardModelAsJson = angular.toJson(model, true);
